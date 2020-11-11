@@ -5,4 +5,6 @@ This is a full-stack webapp project the predicts the amount of solar power gener
 The finished webapp is hosted on Heroku and can be accessed by the following link:
 https://dcsolarpowergeneration.herokuapp.com/
 
-![webapp](Screenshot 2020-11-09 182406.png)
+![webapp](Screenshot-2020-11-09-182406.png)
+
+![df](mymusic_df.png)
