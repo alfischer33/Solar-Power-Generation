@@ -9,8 +9,19 @@ body, html {
     margin-right: auto;
 }
 
+.predictions {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    border-style: double;
+    border-width: 4px;
+    border-color: darkgray;
+    padding: 30px;
+}
+
 table, td, th {
-    border: 3px solid #aaa;
+    border: 3px solid lightgray;
 }
 
 table {
@@ -41,7 +52,7 @@ td {
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 80%; /* Full-width */
+    width: 60%; /* Full-width */
     height: 25px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
