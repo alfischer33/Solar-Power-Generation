@@ -36,5 +36,29 @@ def index2(ambient, module, irradiation):
 
     return render_template('index.html', ambient=ambient, module=module, irradiation=irradiation, prediction=prediction)
 
+# define API to access prediction model
+@app.route('/predict_api', methods=['GET'])
+def api():
+    query_parameters = request.args
+
+    if 'ambient' in request.args:
+        ambient = query_parameters.get('ambient')
+    else: 
+        return "Error: No ambient field provided. Please specify a value for ambient."
+
+    if 'module' in request.args:
+        module = query_parameters.get('module')
+    else: 
+        return "Error: No module field provided. Please specify a value for module."
+
+    if 'irradiation' in request.args:
+        irradiation = query_parameters.get('irradiation')
+    else: 
+        return "Error: No irradiation field provided. Please specify a value for irradiation."
+
+    return str(predict(float(ambient), float(module), float(irradiation)))
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
